@@ -1,6 +1,6 @@
 //complete this code
 class Person {
-	 constructor(name, age) {
+  constructor(name, age) {
     this._name = name;
     this._age = age;
   }
@@ -9,24 +9,32 @@ class Person {
     return this._name;
   }
 
-  set age(age) {
-    this._age = age;
+  set age(value) {
+    this._age = value;
   }
 }
 
 class Student extends Person {
-	 study() {
+  study() {
     console.log(`${this._name} is studying.`);
   }
 }
 
 class Teacher extends Person {
-	teach() {
+  teach() {
     console.log(`${this._name} is teaching.`);
   }
 }
-Student.study();
-Teacher.teach();
+const john = new Person("John Doe", 30);
+console.log(john.name); // Output: John Doe
+john.age = 35; // Set the age using the setter
+console.log(john.age); // Output: 35
+
+const alice = new Student("Alice Smith", 20);
+alice.study(); // Output: Alice Smith is studying.
+
+const mrSmith = new Teacher("Mr. Smith", 45);
+mrSmith.teach(); // Output: Mr. Smith is teaching.
 
 // Do not change the code below this line
 window.Person = Person;
