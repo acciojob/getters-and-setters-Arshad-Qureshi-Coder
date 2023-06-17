@@ -25,6 +25,8 @@ class Teacher extends Person {
     console.log(`${this._name} is teaching.`);
   }
 }
+Student.study();
+Teacher.teach();
 
 // Do not change the code below this line
 window.Person = Person;
